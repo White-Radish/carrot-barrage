@@ -1,0 +1,21 @@
+<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--                配置本地jar包也打包进工程当中-->
+                    <!--                    <includeSystemScope>true</includeSystemScope>-->
+                    <!--                配置依赖包不打进最终的执行jar包里-->
+
+                    <mainClass>com.wisdom.freeway.FreewayApplication</mainClass>
+<!--                    需要指明ZIP 否则java -Dloader.path 不生效-->
+                    <layout>ZIP</layout>
+
+                    <includes>
+                        <include>
+                            <groupId>nothing</groupId>
+                            <artifactId>nothing</artifactId>
+                        </include>
+                    </includes>
+
+                </configuration>
+            </plugin>
